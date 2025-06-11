@@ -1,0 +1,575 @@
+// === file: resume.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ancestry Timeline – Marty McFly</title>
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+  <!-- Header spans full width -->
+  <header class="header">
+    <div class="header-content">
+      <!-- Square profile image to left of data -->
+      <div class="profile-pic"></div>
+      <div class="header-center">
+        <h1 class="person-name">Marty McFly</h1>
+        <div class="lifedates">
+          <span class="birth">BIRTH 12 JUN 1968 • Hill Valley, California, USA</span>
+        </div>
+        <button class="add-tags">+ Add tags</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tabs full width, centered -->
+  <nav class="tabs">
+    <ul>
+      <li class="tab-item active"><a href="#">Facts</a></li>
+      <li class="tab-item"><a href="#">Hints <span class="hint-count">2</span></a></li>
+      <li class="tab-item"><a href="#">Gallery</a></li>
+      <li class="tab-item"><a href="#">LifeStory</a></li>
+      <li class="tab-item"><a href="#">Explore</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main layout centered in container -->
+  <div class="container">
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Timeline Section (left column) -->
+      <section class="timeline-section">
+        <!-- 1885 Residence (Age 17) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1885</span>
+            <span class="age">17</span>
+          </div>
+          <div class="record">
+            <h2>Residence</h2>
+            <div class="date">1885 • Hill Valley, California Territory</div>
+            <div class="details">
+              Occupation: Blacksmith Apprentice; Alias: Clint Eastwood; Relation to Head of House:
+              Lodger (Dr. Emmett Brown)
+            </div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1955 Residence (Age 17) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1955</span>
+            <span class="age">17</span>
+          </div>
+          <div class="record">
+            <h2>Residence</h2>
+            <div class="date">1955 • Hill Valley, California, USA</div>
+            <div class="details">
+              Occupation: Student (Unofficial); Alias: Calvin Klein; Relation to Head of House:
+              Guest (Dr. Emmett Brown)
+            </div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1968 Birth (Age 0) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1968</span>
+            <span class="age">0</span>
+          </div>
+          <div class="record">
+            <h2>Birth</h2>
+            <div class="date">12 Jun 1968 • Hill Valley, California, USA</div>
+            <div class="details">Parents: George McFly &amp; Lorraine Baines</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1971 Birth of Sister Marlene (Age 3) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1971</span>
+            <span class="age">3</span>
+          </div>
+          <div class="record child-birth">
+            <h2>Birth of daughter Marlene McFly (1971–)</h2>
+            <div class="date">22 Sep 1971 • Hill Valley, California, USA</div>
+            <div class="details">Parents: George McFly &amp; Lorraine Baines; Sister of Marty McFly</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1980 Residence (Age 12) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1980</span>
+            <span class="age">12</span>
+          </div>
+          <div class="record">
+            <h2>Residence</h2>
+            <div class="date">1980 • 9303 Lyon Estates, Hill Valley, California, USA</div>
+            <div class="details">Relation to Head of House: Son (George McFly)</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1985 Residence (Age 17) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1985</span>
+            <span class="age">17</span>
+          </div>
+          <div class="record">
+            <h2>Residence</h2>
+            <div class="date">1985 • 9303 Lyon Estates, Hill Valley, California, USA</div>
+            <div class="details">Occupation: Student; Relation to Head of House: Son</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1988 Marriage (Age 20) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1988</span>
+            <span class="age">20</span>
+          </div>
+          <div class="record">
+            <h2>Marriage</h2>
+            <div class="date">1988 • Hill Valley, California, USA</div>
+            <div class="details">Spouse: Jennifer Jane Parker</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1998 Birth of Son (Age 30) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">1998</span>
+            <span class="age">30</span>
+          </div>
+          <div class="record child-birth">
+            <h2>Birth of son Martin Seamus “Marty” McFly, Jr. (1998–)</h2>
+            <div class="date">14 Feb 1998 • Hill Valley, California, USA</div>
+            <div class="details">Parents: Marty McFly &amp; Jennifer Parker</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2002 Birth of Daughter Marlene (Age 16 in 2018) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">2002</span>
+            <span class="age">0</span>
+          </div>
+          <div class="record child-birth">
+            <h2>Birth of daughter Marlene McFly (2002–)</h2>
+            <div class="date">15 Aug 2002 • Hill Valley, California, USA</div>
+            <div class="details">Parents: Marty McFly &amp; Jennifer Parker</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2015 Residence (Age 47 for Marty; Marlene is 13) -->
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="year">2015</span>
+            <span class="age">47</span>
+          </div>
+          <div class="record">
+            <h2>Residence</h2>
+            <div class="date">2015 • 3793 Oakhurst Street, Hilldale, Hill Valley, California, USA</div>
+            <div class="details">Current Address; Daughter Marlene is 13</div>
+            <div class="footer">
+              <span>1 source</span>
+              <a href="#" class="explore-link">🔎 Explore</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sources Section (right column) -->
+      <aside class="sources-section">
+        <div class="sources-header">
+          <h3>Sources</h3>
+          <button class="add-source">+ Add</button>
+        </div>
+        <div class="ancestry-sources">
+          <h4>Ancestry Sources</h4>
+          <ul>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">1880 United States Federal Census</span>
+              </div>
+            </li>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">Hill Valley City Directory, 1955</span>
+              </div>
+            </li>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">California Birth Index, 1968</span>
+              </div>
+            </li>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">California Birth Index, 1971</span>
+              </div>
+            </li>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">California Birth Index, 1998</span>
+              </div>
+            </li>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">California Birth Index, 2002</span>
+              </div>
+            </li>
+            <li>
+              <div class="source-card">
+                <div class="source-thumb placeholder-img"></div>
+                <span class="source-title">Hill Valley Property Records, 2015</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
+
+
+// === file: resume.css ===
+/* Reset & Base */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header (Full-width dark background) */
+.header {
+  width: 100%;
+  background-color: #4a4a4a;
+  border-bottom: 1px solid #3c3c3c;
+  display: flex;
+  justify-content: center; /* Center header-content */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/* Square profile image to left of data */
+.profile-pic {
+  width: 64px;
+  height: 64px;
+  background: #b0cfe3; /* placeholder background */
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left-align text inside its box */
+  text-align: left;
+}
+
+.person-name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.lifedates {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.add-tags {
+  margin-top: 8px;
+  background: #6c6cff;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Tabs Navigation (Full-width) */
+.tabs {
+  width: 100%;
+  background: #eaeaea;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center; /* Center the <ul> */
+}
+
+.tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.tab-item {
+  margin: 0 24px;
+}
+
+.tab-item a {
+  display: inline-block;
+  padding: 12px 0;
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.tab-item.active a {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #007B8A;
+}
+
+.hint-count {
+  background: #007B8A;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Container for centered main content */
+.container {
+  max-width: 794px; /* 500px (timeline) + 24px gap + 270px (sources) */
+  margin: 0 auto;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  margin: 24px 0;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+/* Timeline Section (Left Column) */
+.timeline-section {
+  flex: 0 0 500px;
+  position: relative;
+}
+
+/* Vertical line down the timeline */
+.timeline-section::before {
+  content: "";
+  position: absolute;
+  left: 40px; /* center of marker area */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ccc;
+}
+
+/* Each timeline item: marker + record */
+.timeline-item {
+  display: flex;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Marker column */
+.marker {
+  width: 80px;
+  text-align: right;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #555;
+  position: relative;
+}
+
+/* Dot placed inside the vertical line */
+.marker::after {
+  content: "";
+  position: absolute;
+  left: 40px; /* exactly on the vertical line */
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  background: #007B8A;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* Year and age display */
+.marker .year {
+  display: block;
+  font-weight: bold;
+}
+
+.marker .age {
+  display: block;
+  font-size: 11px;
+  margin-top: 2px;
+  color: #777;
+}
+
+/* Record cards */
+.record {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  flex: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.record h2 {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  color: #007B8A;
+}
+
+.date {
+  font-weight: bold;
+  color: #555;
+}
+
+.details {
+  margin-top: 6px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.footer {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explore-link {
+  color: #007B8A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Special styling for child birth records */
+.record.child-birth {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+/* Sources Section (Right Column) */
+.sources-section {
+  flex: 0 0 270px;
+}
+
+.sources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sources-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #007B8A;
+}
+
+.add-source {
+  background: #007B8A;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.ancestry-sources h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.ancestry-sources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ancestry-sources li {
+  margin-bottom: 12px;
+}
+
+/* Individual source card styling */
+.source-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.source-thumb.placeholder-img {
+  width: 60px;
+  height: 60px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.source-title {
+  font-size: 14px;
+  color: #333;
+}

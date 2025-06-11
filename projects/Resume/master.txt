@@ -1,0 +1,338 @@
+// === file: resume.html ===
+<div class="page-content border rounded padding15 border-black border-2">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Skeba – Resume</title>
+       <style>
+        /* Reset default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            line-height: 1.1rem;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            /* Set margins for US Letter or A4 */
+            margin: 0.2in;
+        }
+
+        .container {
+            max-width: 7.5in; /* For US Letter with 1-inch margins */
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            line-height: 1.5rem;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0px;
+            margin-bottom: 7px;
+            color: #333;
+            line-height: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .job, .education-item {
+            margin-bottom: 5px;
+        }
+
+        .job-header, .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            line-height: 1.2rem;
+            font-size: 15px;
+        }
+
+        .job-title, .degree {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .company, .institution {
+            font-style: italic;
+            color: #555;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #555;
+         
+        ul {
+            list-style-type: disc;
+            margin: 0px 0 5px 15px;
+        }
+
+        /* Updated Skills Section */
+        .skills {
+            display: block; /* Remove Flexbox for single column */
+        }
+
+        .skills div {
+            width: 100%; /* Full width for each skill */
+            display: flex;
+        }
+.skilltype{    min-width: 130px;
+}
+        a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+.skillset{    font-size: 15px;}
+        @media print {
+            body {
+                margin: 0.2in; /* Match screen margin */
+            }
+
+            .container {
+                max-width: 7.5in;
+                margin: 0 auto;
+            }
+
+            /* Optional: Prevent page breaks after headings */
+            h2 {
+                page-break-after: avoid;
+            }
+
+            /* Ensure skills list prints correctly */
+            .skills {
+                display: block;
+            }
+
+            .skills div {
+                width: 100%;
+              
+            }
+        }
+    </style>
+
+
+
+
+    <div class="container">
+        <div class="header">
+            <h1>Nicholas Skeba</h1>
+            <p>
+                <a href="mailto:nicholas.skeba@mba2019.esmt.org">nicholas.skeba@mba2019.esmt.org</a> |
+                <a href="https://linkedin.com/in/nicholas-skeba" target="_blank">linkedin.com/in/nicholas-skeba</a> |
+                <a href="https://skeba.info" target="_blank">skeba.info</a>
+            </p>
+        </div>
+
+  
+
+        <div class="section">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Global Product Marketing Manager</div>
+                    <div class="date">Nov 2023 – Present</div>
+                </div>
+                <div class="job-header">
+                    <div class="company">Fluke Corporation</div>
+                    <div class="location">Seattle, WA</div>
+                </div>
+                <ul>
+                    <li>Uncovered customer and competitive insights to drive marketing actions and delivered findings cross-functionally.</li>
+                    <li>Partnered with product managers to develop product roadmaps and customer buying journeys.</li>
+                    <li>Created strategic marketing plans for new product introductions (NPIs) and compelling core product messaging.</li>
+                    <li>Coordinated with commercial strategy partners across EMEA, APAC, and the Americas to determine marketing priorities.</li>
+                    <li>Acted as the product line and customer expert within marketing to align strategies across teams.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Marketing Manager</div>
+                    <div class="date">2022 – 2023</div>
+                </div>
+                <div class="job-header">
+                    <div class="company">Ossia Inc.</div>
+                    <div class="location">Seattle, WA</div>
+                </div>
+                <ul>
+                    <li>Prepared the startup for the Consumer Electronics Show by creating marketing materials, website design, and implementing HubSpot.</li>
+                    <li>Generated over 300 high-quality leads through in-person sales and follow-up campaigns.</li>
+                    <li>Successfully completed a 3-month contract and contributed to the Ossia Cota Power Table project, recognized as one of the “200 Best Inventions of 2022.”</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Lifecycle Marketing Manager</div>
+                    <div class="date">Aug 2020 – Present</div>
+                </div>
+                <div class="job-header">
+                    <div class="company">Parallels GmbH</div>
+                    <div class="location">Seattle, WA</div>
+                </div>
+                <ul>
+                    <li>Developed and exceeded marketing channel goals by over 10% through targeted customer segmentation.</li>
+                    <li>A/B tested campaigns and improved in-product messaging, email, and website layouts to enhance product acquisition, contributing to 2020 Q4 sales goals of $2 million over the targeted revenue.</li>
+                    <li>Drove new customer acquisition through a customer trial survey campaign, adding $30k in sales within 2 months of launch.</li>
+                    <li>Devised a campaign with 10%+ CTR converting customers from perpetual to SaaS subscription, increasing LTV by 20%.</li>
+                    <li>Managed localization, creative, and marketing teams to achieve a 2-week targeted implementation timeline.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Customer Acquisition and Retention Intern</div>
+                    <div class="date">Oct 2019 – Dec 2019</div>
+                </div>
+                <div class="job-header">
+                    <div class="company">DiscoEat GmbH</div>
+                    <div class="location">Berlin, Germany</div>
+                </div>
+                <ul>
+                    <li>Led a five-member team, coordinating tasks within Asana to analyze syndicated customer data, perfecting the customer journey from sign-up to referral, resulting in a 30% referral increase after retooling the referral process.</li>
+                    <li>Spearheaded weekly strategy meetings with executive stakeholders to define referral strategies based on positioning, pricing, and operational costs.</li>
+                    <li>Utilized data analytics to extract insights and optimize the customer acquisition strategy, improving ROI.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">SaaS Performance Marketing and Growth Strategy</div>
+                    <div class="date">Sept 2015 – Dec 2018</div>
+                </div>
+                <div class="job-header">
+                    <div class="company">CostBrain LLC</div>
+                    <div class="location">Chicago, IL</div>
+                </div>
+                <ul>
+                    <li>Increased organic traffic by 200% through a complete technical SEO audit and content strategy.</li>
+                    <li>Scaled paid search campaigns, maximizing ROAS by maintaining acquisition efficiency.</li>
+                    <li>Interviewed 50 potential users to define the target audience for the SaaS product and optimal channels to understand competitive landscape and target persona needs.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">SEM / SEO Campaign Manager</div>
+                    <div class="date">Sep 2008 – Dec 2018</div>
+                </div>
+                <div class="job-header">
+                    <div class="company">Skeba Digital Corp</div>
+                    <div class="location">Chicago, IL</div>
+                </div>
+                <ul>
+                    <li>Improved CTR by 50% by monitoring digital marketing assets within Google Analytics and using A/B testing to refine layouts.</li>
+                    <li>Onboarded, trained, and oversaw 3 copywriters to implement a content strategy based on Analytics analysis.</li>
+                    <li>Owned new customer growth, amplifying site traffic from 20k to 500k users per month by directing content creation in WordPress CMS.</li>
+                </ul>
+            </div>
+        </div>
+
+ 
+
+        <div class="section">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="degree">Master of Business Administration</div>
+                    <div class="date">Dec 2019</div>
+                </div>
+                <div class="education-header">
+                    <div class="institution">European School of Management and Technology</div>
+                    <div class="location">Berlin, Germany</div>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="degree">Consumer Behavior and Theory MBA Module</div>
+                    <div class="date">Oct 2019</div>
+                </div>
+                <div class="education-header">
+                    <div class="institution">Yale School of Management</div>
+                    <div class="location">New Haven, CT</div>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="degree">Bachelor of Business Administration</div>
+                    <div class="date">May 2007</div>
+                </div>
+                <div class="education-header">
+                    <div class="institution">Western Michigan University</div>
+                    <div class="location">Kalamazoo, MI</div>
+                </div>
+            </div>
+        </div>
+
+    
+
+    
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div>
+                     <strong class="skilltype">Languages</strong> <span class="skillset">English: Native | Spanish: Advanced (B2) | German: Advanced (B2)</span>
+                </div>
+                <div>
+                     <strong class="skilltype">Design</strong><span class="skillset">
+                    HTML | CSS | JavaScript | Adobe Creative Suite (Photoshop, Illustrator)
+               </span> </div>
+                <div>
+                     <strong class="skilltype">Marketing</strong><span class="skillset"> SEO | CRM | Ahrefs | SEM | Ad Platforms (<i>Facebook, Bing, Twitter, Google AdWords</i>)</span>
+                </div>
+              
+           
+               <div>
+            <strong class="skilltype">Coding</strong><span class="skillset"> Python | JavaScript | React | Flask | PHP | MySQL | REST APIs | HTML5 | CSS3 | Bootstrap | JSON | Git | Node.js | Puppeteer | BeautifulSoup | Regex
+            </span></div>
+        </div> </div>
+    </div>
+
+
+
+
+
+        </div>

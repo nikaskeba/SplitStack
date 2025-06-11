@@ -1,0 +1,643 @@
+// === file: tourloginpage.html ===
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<title>Tour Admin Portal</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #0c7ff2;cursor: pointer;
+      border-radius: 50%;
+    }
+    .slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #0c7ff2;cursor: pointer;
+      border-radius: 50%;
+      border: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-50 text-slate-800" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+<div>
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center gap-2">
+<span class="material-icons-outlined text-2xl text-primary-600" style="color: #0c7ff2;">admin_panel_settings</span>
+<h1 class="text-xl font-bold text-slate-900">Tour Admin</h1>
+</div>
+<button class="p-2 rounded-md hover:bg-slate-100">
+<span class="material-icons-outlined text-slate-600">settings</span>
+</button>
+</div>
+<nav class="flex border-b border-slate-200">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary-600 text-primary-600 pb-3 pt-3 px-4" href="#" style="border-color: #0c7ff2; color: #0c7ff2;">
+<p class="text-sm font-semibold">Admin</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-3 px-4" href="#">
+<p class="text-sm font-semibold">Super-Admin</p>
+</a>
+</nav>
+</div>
+</header>
+<main class="container mx-auto p-4 space-y-8">
+<section>
+<h2 class="text-xl font-semibold text-slate-900 mb-4">Pending Tours</h2>
+<div class="space-y-3">
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Mountain Hiking Adventure</p>
+<p class="text-xs text-slate-500">Creator: Alex Bennett</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-15</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">City Exploration Walk</p>
+<p class="text-xs text-slate-500">Creator: Sophia Clark</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-16</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Coastal Kayaking Trip</p>
+<p class="text-xs text-slate-500">Creator: Ethan Davis</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-17</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Desert Safari Expedition</p>
+<p class="text-xs text-slate-500">Creator: Olivia Foster</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-18</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-semibold text-slate-900 mb-4">Flagged Content</h2>
+<div class="space-y-3">
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Historical Site Visit</p>
+<p class="text-xs text-slate-500">Creator: Noah Green</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-19</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Wildlife Photography Tour</p>
+<p class="text-xs text-slate-500">Creator: Ava Harris</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-20</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Culinary Tasting Journey</p>
+<p class="text-xs text-slate-500">Creator: Liam Jackson</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-21</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Art and Culture Walk</p>
+<p class="text-xs text-slate-500">Creator: Isabella King</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-22</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-semibold text-slate-900 mb-4">Payment Splits</h2>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<label class="text-base font-medium text-slate-900" for="paymentSplit">Creator Payout Percentage</label>
+<div class="flex items-center w-full sm:w-1/2 gap-3">
+<input class="slider w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary-600" id="paymentSplit" max="100" min="0" style="accent-color: #0c7ff2;" type="range" value="50"/>
+<span class="text-sm font-medium text-slate-700 w-10 text-right" id="splitValue">50%</span>
+</div>
+</div>
+<p class="text-xs text-slate-500 mt-2">Adjust the percentage of the tour price that goes to the creator.</p>
+</div>
+</section>
+</main>
+</div>
+<footer class="py-4">
+<div class="container mx-auto px-4 text-center text-xs text-slate-500">
+        © 2024 Tour Admin Portal. All rights reserved.
+      </div>
+</footer>
+</div>
+<script>
+    const slider = document.getElementById('paymentSplit');
+    const splitValue = document.getElementById('splitValue');
+    if (slider && splitValue) {
+      slider.oninput = function() {
+        splitValue.textContent = this.value + '%';
+      }
+    }
+  </script>
+
+</body></html>
+
+// === file: TourViewPage.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Berlin: City Highlights Tour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/320x160a/cccccc/000000&text=Reichstag" alt="Reichstag">
+      </div>
+      <div class="carousel-item play-item">
+        <img src="https://dummyimage.com/320x160/cccccc/000000&text=Brandenburg+Gate" alt="Brandenburg Gate">
+        <button class="play-btn" aria-label="Play tour preview">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+        </button>
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/320x160/cccccc/000000&text=TV+Tower" alt="TV Tower">
+      </div>
+      <button class="bookmark-btn" aria-label="Save tour">
+        <svg viewBox="0 0 24 24"><path d="M6 4h12v18l-6-4-6 4V4z"/></svg>
+      </button>
+    </div>
+
+    <div class="content">
+      <h1 class="title">
+        Berlin: City Highlights<br>
+        <span class="subtitle">Self-Guided Audio Tour</span>
+      </h1>
+      <div class="actions">
+        <div class="price">€14.99</div>
+        <button class="btn-buy">Buy / Download</button>
+      </div>
+
+      <details class="stops">
+        <summary>
+          Tour Stops
+          <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </summary>
+        <ul>
+          <li>
+            <svg class="icon-pin" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            Reichstag
+          </li>
+          <li>
+            <svg class="icon-pin" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            Brandenburg Gate
+          </li>
+          <li>
+            <svg class="icon-pin" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            Museum Island
+          </li>
+          <li>
+            <svg class="icon-pin" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            Berliner Dom
+          </li>
+        </ul>
+      </details>
+
+      <div class="rating">
+        <span class="score">4,7</span>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.265z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.265z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.265z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.265z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.265z"/></svg>
+        </div>
+        <span class="reviews">(134 reviews)</span>
+      </div>
+
+      <blockquote class="quote">
+        “This audio tour was very informative and easy to follow.”
+      </blockquote>
+    </div>
+  </div>
+</body>
+</html>
+
+// === file: UserBrowsePage.html ===
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white justify-between group/design-root overflow-x-hidden"
+      style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
+    >
+      <div>
+        <div class="@container">
+          <div class="@[480px]:px-4 @[480px]:py-3">
+            <div
+              class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-xl min-h-[218px]"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcfbWdtdftwYnP9vvnLzGheqDeYA9d-eGoP3O3mSsTR9P7KhphkE-5wNyRqEQATReZKYA1dLNi0HGx53V3Palz6poLSTfoY1IqclpZhwvr7LsTne4ghaUTBqZ1AjHC8faFLquHpQ93pBe8bsDHVkS7QzOkac6l7kLf37RPABdEW0vs3skBOjpthoVynhJ9UMYvjF2_MOEMLsJgO7z2cfE4BdbJUNoVgqoz9cEJUSCGmG5I9NjBzcXRrrll7bIHOU1lGlIsWByUgZg");'
+            ></div>
+          </div>
+        </div>
+        <div class="px-4 py-3">
+          <label class="flex flex-col min-w-40 h-12 w-full">
+            <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+              <div
+                class="text-[#6f816a] flex border-none bg-[#f2f4f1] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                data-icon="MagnifyingGlass"
+                data-size="24px"
+                data-weight="regular"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                </svg>
+              </div>
+              <input
+                placeholder="Search tours by city, theme..."
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#131612] focus:outline-0 focus:ring-0 border-none bg-[#f2f4f1] focus:border-none h-full placeholder:text-[#6f816a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                value=""
+              />
+            </div>
+          </label>
+        </div>
+        <h2 class="text-[#131612] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Tours</h2>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBH60gBV0suJAa12xLqgX29qWEuU9zYSTqCRtVg-tzF_X1fh3Prl81HDm60IE2E3nI5PLpiknxiq7jd2qiZEExGGpJlaxlTooofWBzWSE43oxVjIUnscryHvjBCCxIiWZEwgxjRtkat1TU3pMxErIW4ZQH1l1wVQsG34hRTdOuYTBGXVejXPWdFpEaM8Z7_bHWDbG6aVMDQlZy42k6o1ES43PBuUg6WQPIV9BxiquoAWnJwm_ZOTosK6q_wcbXbX72ajjPrdW3yI6o");'
+            ></div>
+            <p class="text-[#131612] text-base font-medium leading-normal">Historic Downtown Walking Tour</p>
+          </div>
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ6GDjmtd8P6kbIBWT1FxaSgOCHdh5Yry-CRknlu2iKiDgg0x_iKrzwCND0HnTqGP9jeFprdnzf3eQZIgrq5RL8p3rXn8GfO5gOdzEWOSJCRLk-SBWaCFQqWpZHm-WAVI0FC_RmbYaKDtRWW4Ks-S58DVh5zh_hz2xaAYro84uufZJGNcyS4-qbURXKZvhjyJL-cODnnDbxQXpKNjNfNbFNY0pGXs1AMeZEQgyau6g7Q9P0yCTtBLSSeck2SubN0GEv756RPzlx5w");'
+            ></div>
+            <p class="text-[#131612] text-base font-medium leading-normal">Art &amp; Culture Exploration</p>
+          </div>
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIy8WnFOJaEwcjtQKonA627olNIppWmKUjiwTu2R0f3bwh8bF0N29jOOX1Crso6deFx4V-GL0jH7ltjpkQshqJZZCNz4cVjbWJCATXNgXpnpr0YpBN51qls3Wpe9TLnbmscc9NQZDBorwZ7-aRM0MPJ4RAnxf99PdeB4aNVlzlnLl1rR4Fce8OOzB1bgOfAEG9ldRsiqkkzgFN4pca4Tq98iovO179SMVAh4a2u48tfRgdgTLVyP-l4NyAGFZ8oIXCC6ahMfzzRVc");'
+            ></div>
+            <p class="text-[#131612] text-base font-medium leading-normal">Foodie Delights Tour</p>
+          </div>
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDeOgKe3wmOQz9pAodv69wgtO0RC9l9RCXxekv2IOrBKk9l7AmKD0aRLtwMY4w8ttJeS9JNcRFrORcY30dTf2V2FTUKczbfuageSLBm95mb794QnmaWtim106eggC_Dd4LocmEfRvBH-4sYdiIxSya7bcGSFenj0NaXoX58_YK6w6cMd0fkNcqrLPHoRdA70b02boybYekXlR_hcs9eCQ4leUam4gTvBWqCm5tGlrn6usUZR7LFuirssOF3o8AvK21HzJ8od8ixjEU");'
+            ></div>
+            <p class="text-[#131612] text-base font-medium leading-normal">Hidden Gems Discovery</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex gap-2 border-t border-[#f2f4f1] bg-white px-4 pb-3 pt-2">
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#131612]" href="#">
+            <div class="text-[#131612] flex h-8 items-center justify-center" data-icon="MagnifyingGlass" data-size="24px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M168,112a56,56,0,1,1-56-56A56,56,0,0,1,168,112Zm61.66,117.66a8,8,0,0,1-11.32,0l-50.06-50.07a88,88,0,1,1,11.32-11.31l50.06,50.06A8,8,0,0,1,229.66,229.66ZM112,184a72,72,0,1,0-72-72A72.08,72.08,0,0,0,112,184Z"
+                ></path>
+              </svg>
+            </div>
+            <p class="text-[#131612] text-xs font-medium leading-normal tracking-[0.015em]">Explore</p>
+          </a>
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#6f816a]" href="#">
+            <div class="text-[#6f816a] flex h-8 items-center justify-center" data-icon="MapTrifold" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M228.92,49.69a8,8,0,0,0-6.86-1.45L160.93,63.52,99.58,32.84a8,8,0,0,0-5.52-.6l-64,16A8,8,0,0,0,24,56V200a8,8,0,0,0,9.94,7.76l61.13-15.28,61.35,30.68A8.15,8.15,0,0,0,160,224a8,8,0,0,0,1.94-.24l64-16A8,8,0,0,0,232,200V56A8,8,0,0,0,228.92,49.69ZM104,52.94l48,24V203.06l-48-24ZM40,62.25l48-12v127.5l-48,12Zm176,131.5-48,12V78.25l48-12Z"
+                ></path>
+              </svg>
+            </div>
+            <p class="text-[#6f816a] text-xs font-medium leading-normal tracking-[0.015em]">My Tours</p>
+          </a>
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#6f816a]" href="#">
+            <div class="text-[#6f816a] flex h-8 items-center justify-center" data-icon="User" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                ></path>
+              </svg>
+            </div>
+            <p class="text-[#6f816a] text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+          </a>
+        </div>
+        <div class="h-5 bg-white"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+// === file: style.css ===
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #f0f2f5;
+  padding: 20px;
+}
+.card {
+  max-width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  height: 160px;
+}
+.carousel-item {
+  flex: 1;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.play-item .play-btn {
+  position: absolute;
+  top: 50%;
+  left: calc(100% / 3 + (100% / 3) / 2);
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+.bookmark-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+}
+.bookmark-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+}
+.content {
+  padding: 16px;
+}
+.title {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #111;
+  margin-bottom: 12px;
+}
+.subtitle {
+  font-size: 14px;
+  color: #555;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.price {
+  background: #e6f4ea;
+  color: #2a7a3e;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn-buy {
+  background: #f5a623;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.stops summary {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.stops .chevron {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  fill: #333;
+  transition: transform .2s;
+}
+.stops[open] .chevron {
+  transform: rotate(180deg);
+}
+.stops ul {
+  list-style: none;
+  padding-left: 0;
+}
+.stops li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+.icon-pin {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: #666;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 16px 0 8px;
+}
+.score {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.stars {
+  display: flex;
+}
+.stars svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #f5a623;
+}
+.reviews {
+  font-size: 12px;
+  color: #777;
+  margin-left: 6px;
+}
+.quote {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.4;
+}

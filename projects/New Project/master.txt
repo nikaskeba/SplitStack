@@ -1,0 +1,83 @@
+// === file: web.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jane Doe - Personal Page</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Jane Doe</h1>
+      <p>Web Developer & Designer</p>
+    </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Jane, a creative developer with a passion for clean, elegant designs and efficient code.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Portfolio Site</strong> – A showcase of my web design work.</li>
+        <li><strong>Weather App</strong> – A simple app that shows current weather using an API.</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: jane@example.com</p>
+    </section>
+    <footer>
+      <p>&copy; 2025 Jane Doe</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+// === file: project.css ===
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+.s{
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 2em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #007acc;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+footer {
+  text-align: center;
+  color: #999;
+  font-size: 0.9em;
+}

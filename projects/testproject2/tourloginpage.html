@@ -1,0 +1,263 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<title>Tour Admin Portal</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #0c7ff2;cursor: pointer;
+      border-radius: 50%;
+    }
+    .slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #0c7ff2;cursor: pointer;
+      border-radius: 50%;
+      border: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-50 text-slate-800" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+<div>
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center gap-2">
+<span class="material-icons-outlined text-2xl text-primary-600" style="color: #0c7ff2;">admin_panel_settings</span>
+<h1 class="text-xl font-bold text-slate-900">Tour Admin</h1>
+</div>
+<button class="p-2 rounded-md hover:bg-slate-100">
+<span class="material-icons-outlined text-slate-600">settings</span>
+</button>
+</div>
+<nav class="flex border-b border-slate-200">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary-600 text-primary-600 pb-3 pt-3 px-4" href="#" style="border-color: #0c7ff2; color: #0c7ff2;">
+<p class="text-sm font-semibold">Admin</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-3 px-4" href="#">
+<p class="text-sm font-semibold">Super-Admin</p>
+</a>
+</nav>
+</div>
+</header>
+<main class="container mx-auto p-4 space-y-8">
+<section>
+<h2 class="text-xl font-semibold text-slate-900 mb-4">Pending Tours</h2>
+<div class="space-y-3">
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Mountain Hiking Adventure</p>
+<p class="text-xs text-slate-500">Creator: Alex Bennett</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-15</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">City Exploration Walk</p>
+<p class="text-xs text-slate-500">Creator: Sophia Clark</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-16</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Coastal Kayaking Trip</p>
+<p class="text-xs text-slate-500">Creator: Ethan Davis</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-17</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Desert Safari Expedition</p>
+<p class="text-xs text-slate-500">Creator: Olivia Foster</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-18</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-semibold text-slate-900 mb-4">Flagged Content</h2>
+<div class="space-y-3">
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Historical Site Visit</p>
+<p class="text-xs text-slate-500">Creator: Noah Green</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-19</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Wildlife Photography Tour</p>
+<p class="text-xs text-slate-500">Creator: Ava Harris</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-20</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Culinary Tasting Journey</p>
+<p class="text-xs text-slate-500">Creator: Liam Jackson</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-21</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex-1">
+<p class="text-base font-medium text-slate-900">Art and Culture Walk</p>
+<p class="text-xs text-slate-500">Creator: Isabella King</p>
+<p class="text-xs text-slate-500">Submitted: 2024-01-22</p>
+</div>
+<div class="flex items-center gap-2 mt-2 sm:mt-0 shrink-0">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Flagged </span>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200">
+<span class="material-icons-outlined text-sm">check_circle</span> Approve
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-red-100 text-red-700 hover:bg-red-200">
+<span class="material-icons-outlined text-sm">cancel</span> Reject
+                  </button>
+<button class="flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">
+<span class="material-icons-outlined text-sm">contact_mail</span> Contact
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-semibold text-slate-900 mb-4">Payment Splits</h2>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<label class="text-base font-medium text-slate-900" for="paymentSplit">Creator Payout Percentage</label>
+<div class="flex items-center w-full sm:w-1/2 gap-3">
+<input class="slider w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary-600" id="paymentSplit" max="100" min="0" style="accent-color: #0c7ff2;" type="range" value="50"/>
+<span class="text-sm font-medium text-slate-700 w-10 text-right" id="splitValue">50%</span>
+</div>
+</div>
+<p class="text-xs text-slate-500 mt-2">Adjust the percentage of the tour price that goes to the creator.</p>
+</div>
+</section>
+</main>
+</div>
+<footer class="py-4">
+<div class="container mx-auto px-4 text-center text-xs text-slate-500">
+        © 2024 Tour Admin Portal. All rights reserved.
+      </div>
+</footer>
+</div>
+<script>
+    const slider = document.getElementById('paymentSplit');
+    const splitValue = document.getElementById('splitValue');
+    if (slider && splitValue) {
+      slider.oninput = function() {
+        splitValue.textContent = this.value + '%';
+      }
+    }
+  </script>
+
+</body></html>
+
