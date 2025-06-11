@@ -109,7 +109,12 @@ function PreviewPane({ files, visible = true }) {
         ref={iframeRef}
         title="preview"
         sandbox="allow-scripts allow-same-origin"
-        style={{ flex: 1, width: "100%", border: 0 }}
+        style={{
+            width: "100%",
+            height: "100%",
+            border: 0,
+            boxSizing: "border-box",
+         }}
       />
     </div>
   );

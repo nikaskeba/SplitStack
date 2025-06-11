@@ -13,13 +13,13 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios                    from "axios";
 import { message }              from "antd";
 import Split                    from "react-split";
-
+import treeString from "../utils/treeString";
 import FileTree    from "../components/FileTree";
 import TopBar      from "../components/TopBar";
 import TabBar      from "../components/TabBar";
 import PreviewPane from "../components/PreviewPane";
 import { parseMasterFile } from "../utils/fileParser";
-
+import { EditorView } from "@codemirror/view";
 const API_BASE = "http://localhost:5100/api/projects";
 
 /* pick CodeMirror mode from path */
@@ -126,9 +126,9 @@ function EditorPane({
   codeValue, onCodeChange, editorRef,
   onAdd, onClose, style = {},
 }) {
-  const tabPaths = ["", ...sections.map((s) => s.path)];   // "" = Master
+ const tabPaths = sections.map(s => s.path);   
   return (
-    <div style={{ display:"flex", flexDirection:"column", minHeight:0, ...style }}>
+    <div style={{ display:"flex", flexDirection:"column", minHeight:0,minWidth: 0, ...style }}>
       <TabBar
         sections={tabPaths}
         active={active}
@@ -142,7 +142,20 @@ function EditorPane({
           value={codeValue}
           height="100%"
           theme={oneDark}
-          extensions={[langExt(active), lintGutter()]}
+ extensions={[
+   /* language mode — same logic as before */
+   active.endsWith(".html") ? html()
+   : active.endsWith(".css") ? css()
+   : active.endsWith(".js")  ? javascript({ jsx: true })
+   : active === "__TREE__"   ? []                // plain text
+   : javascript({ jsx: true }),
+
+  /* NEW: make long lines wrap so the pane can shrink */
+  EditorView.lineWrapping,
+
+   /* …or, if you prefer horizontal scrolling instead of wrapping:
+      EditorView.theme({ "&": { overflowX: "auto" } }), */
+ ]}
           onChange={onCodeChange}
           ref={editorRef}
         />
@@ -157,7 +170,7 @@ export default function Editor() {
   const allProjects     = useLocation().state?.projects || [projectName];
   const navigate        = useNavigate();
   const editorRef       = useRef(null);
-
+  const [gitIgnore, setGitIgnore] = useState([]);
   /* basic state */
   const [master, setMaster]     = useState("");
   const [active, setActive]     = useState("");      // '' ⇒ Master
@@ -168,23 +181,50 @@ const handleCloseDiff = () => setShowDiff(false);
   /* diff overlay */
   const [showDiff, setShowDiff] = useState(false);
   const [diffText, setDiffText] = useState("");
-
+const treeText = useMemo(
+  () => treeString(files, ["node_modules", ...gitIgnore]),
+  [files, gitIgnore]
+);
   /* load project data */
-  useEffect(() => {
-    (async () => {
-      try {
-        const { data: allFiles } = await axios.get(`${API_BASE}/${projectName}/files`);
-        setFiles(allFiles.filter((f) => f !== "master.txt" && f !== "tabs.json"));
+useEffect(() => {
+  let cancelled = false;          // guards against setState after unmount
 
-        const { data: masterData } = await axios.get(`${API_BASE}/${projectName}/master`);
-        const txt = masterData.content || "";
-        setMaster(txt);
-        setActive(parseMasterFile(txt)[0]?.path || "");
-      } catch {
-        message.error("Failed to load project");
-      }
-    })();
-  }, [projectName]);
+  async function fetchProject() {
+    try {
+      /* 1 ▪ do the two GETs in parallel */
+      const [filesRes, masterRes] = await Promise.all([
+        axios.get(`${API_BASE}/${projectName}/files`),
+        axios.get(`${API_BASE}/${projectName}/master`),
+      ]);
+
+      /* 2 ▪ bail if the component unmounted meanwhile */
+      if (cancelled) return;
+
+      /* 3 ▪ update React state */
+      const fileList = filesRes.data.filter(
+        (f) => f !== "master.txt" && f !== "tabs.json"
+      );
+      setFiles(fileList);
+
+      const masterTxt = masterRes.data.content || "";
+      setMaster(masterTxt);
+
+      /* pick the first section as the initial tab; fallback = Master */
+      const firstSection = parseMasterFile(masterTxt)[0]?.path || "";
+      setActive(firstSection);
+    } catch (err) {
+      message.error("Failed to load project data");
+      console.error(err);
+    }
+  }
+
+  fetchProject();
+
+  /* 4 ▪ cleanup so we don’t set state after unmount */
+  return () => {
+    cancelled = true;
+  };
+}, [projectName]);   // ← re‑runs when the route changes
 
   /* derived */
   const sections    = useMemo(() => parseMasterFile(master), [master]);
@@ -282,7 +322,7 @@ const handleCloseDiff = () => setShowDiff(false);
         <button
           onClick={() => setPreviewMode("partial")}
           style={{
-            position:"fixed", top:12, right:12, zIndex:2000,
+            position:"fixed", top:52, right:12, zIndex:2000,
             padding:"6px 14px", background:"#1677ff", color:"#fff",
             border:"none", borderRadius:4, cursor:"pointer",
           }}
@@ -338,7 +378,7 @@ const handleCloseDiff = () => setShowDiff(false);
             sizes={[60,40]}
             minSize={[150,120]}
             gutterSize={12}
-            style={{ flex:1, display:"flex", flexDirection:"column" }}
+             style={{ flex: 1, minWidth: 0 }}
             gutterStyle={() => ({
               background:"#d9d9d9", cursor:"row-resize", height:12,
             })}
@@ -347,8 +387,14 @@ const handleCloseDiff = () => setShowDiff(false);
               sections={sections}
               active={active}
               setActive={setActive}
-              codeValue={codeValue}
-              onCodeChange={onCodeChange}
+                codeValue={
+    active === "__TREE__"
+      ? treeText
+      : active === "" ? master
+      : sections.find(s => s.path === active)?.code || ""
+  }
+                onCodeChange={active === "__TREE__" ? () => {} : onCodeChange} // read‑only
+
               editorRef={editorRef}
               onAdd={handleCreateFile}
               onClose={handleCloseSection}
@@ -363,8 +409,14 @@ const handleCloseDiff = () => setShowDiff(false);
             sections={sections}
             active={active}
             setActive={setActive}
-            codeValue={codeValue}
-            onCodeChange={onCodeChange}
+               codeValue={
+    active === "__TREE__"
+      ? treeText
+      : active === "" ? master
+      : sections.find(s => s.path === active)?.code || ""
+  }
+                onCodeChange={active === "__TREE__" ? () => {} : onCodeChange} // read‑only
+
             editorRef={editorRef}
             style={{ flex:1 }}
             onAdd={handleCreateFile}

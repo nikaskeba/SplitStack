@@ -1,2 +1,146 @@
 // === file: index.html ===
-ttest
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicholas Skeba – Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero">
+    <img src="https://placehold.co/600x400" alt="Nicholas Skeba Profile" />
+    <h1>Nicholas Skeba</h1>
+    <p class="pronouns">They / Them</p>
+    <p class="role">Product Marketing Manager</p>
+  </header>
+
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+    <aside class="col-md-3 mb-4">
+      <h2>Experience</h2>
+      <div class="company">
+        <img src="https://placehold.co/100x50" alt="Fluke Corporation logo" />
+        <h3>Global Product Marketing Manager</h3>
+        <p><strong>Fluke Corporation</strong> · Full-time</p>
+        <p>Nov 2023 – Present · 1 yr 8 mos</p>
+        <p>Seattle, Washington, United States · Hybrid</p>
+        <p>As the Global Product Marketing Manager, I leverage machine learning and artificial intelligence—particularly through tool calling—to uncover actionable customer and competitive insights that drive marketing strategies. By integrating AI-driven tools into my workflow, I can analyze complex datasets, automate repetitive tasks, and enhance decision-making, ensuring findings are delivered cross-functionally with precision and speed.</p>
+        <p>I partner closely with product managers to develop forward-thinking product roadmaps and customer buying journeys, employing AI to predict trends and refine customer segmentation. These insights inform the creation of strategic marketing plans for new product introductions (NPIs) and the development of compelling, data-backed core product messaging across the portfolio.</p>
+        <p>Collaborating with commercial strategy partners, I utilize AI-enhanced analytics to determine marketing priorities across regions (EMEA, APAC, and the Americas), ensuring campaigns are optimized for regional performance. Additionally, I work with commercial marketing teams to develop impactful assets and execute data-driven campaigns, integrating insights from AI tools to maximize engagement and ROI.</p>
+        <p>As the product line and customer expert within marketing, I continually explore emerging AI and ML technologies, incorporating them to refine processes, personalize customer experiences, and ensure the marketing strategy is both innovative and effective.</p>
+      </div>c
+      <div class="company">
+        <img src="https://placehold.co/100x50" alt="Ossia Inc. logo" />
+        <h3>Marketing Manager</h3>
+        <p><strong>Ossia Inc.</strong> · Contract</p>
+        <p>2022 – 2023 · 1 yr</p>
+        <p>Seattle, Washington, United States · Hybrid</p>
+        <p>Prepared a startup for the Consumer Electronics Show in Las Vegas, Nevada through the creation of all marketing materials, website design, and implementation of HubSpot inbound lead qualification. Generated over 300 high-quality leads through in-person sales and follow-up campaigns.</p>
+        <p>Successfully completed 3-month contract.</p>
+      </div>
+      <div class="company">
+        <img src="https://placehold.co/100x50" alt="Corel Corporation logo" />
+        <h3>Lifecycle Marketing Manager | Parallels</h3>
+        <p><strong>Corel Corporation</strong> · Full-time</p>
+        <p>2020 – 2022 · 2 yrs</p>
+        <p>Seattle, Washington, United States</p>
+        <p>Passionate about driving growth and fostering teamwork, I specialize in enhancing customer acquisition and experience throughout the entire customer journey. Skilled in securing buy-in for large-scale, long-term projects from upper management.</p>
+        <ul>
+          <li>Stakeholder Management</li>
+          <li>Team collaboration</li>
+          <li>Data Analytics (SQL, Google, Tableau, Salesforce)</li>
+          <li>Design (CSS, HTML)</li>
+        </ul>
+        <p><strong>Key Focus Areas:</strong></p>
+        <ul>
+          <li>Customer retention: Optimizing product renewal emails, improving perceived value proposition.</li>
+          <li>Payment optimization: Cart abandonment and delinquency emails, checkout optimization.</li>
+          <li>Trial funnel optimization: In-app messaging to improve customer onboarding and trial acquisition.</li>
+          <li>Campaign generation: A/B tests based on data-backed hypotheses to improve conversion rates.</li>
+          <li>Goal setting: Managing stakeholders to set realistic objectives and meet prioritized deadlines.</li>
+        </ul>
+      </div>
+    </aside>
+    <main class="col-md-7">
+    <section id="about">
+      <h2>About</h2>
+      <p>Born and raised in Grand Rapids, Michigan, I am a dynamic professional at the intersection of marketing, artificial intelligence, and full-stack development. My MBA from ESMT Berlin equipped me with a robust foundation in business principles, empowering me to navigate and innovate in complex, data-driven environments.</p>
+      <p>Fluent in advanced German and Spanish, I thrive in multicultural teams and excel in leveraging technology to solve intricate marketing challenges. My passion for artificial intelligence led me to specialize in building intelligent solutions that optimize marketing workflows, enhance customer engagement, and unlock insights from complex datasets.</p>
+      <p>Through full-stack development expertise, I seamlessly integrate AI capabilities into marketing tools and platforms, automating processes, personalizing user experiences, and driving data-driven decision-making. I utilize Python, JavaScript, React, and cloud-based technologies to create scalable solutions that bridge the gap between creative strategy and technical execution.</p>
+      <p>With a strong background in design and program management, I combine creativity with technical precision to craft impactful marketing strategies and AI-driven applications. My focus is on delivering measurable results, from streamlining campaigns to implementing predictive analytics that enable businesses to stay ahead in a competitive landscape.</p>
+      <p>Committed to lifelong learning and innovation, I continuously explore emerging AI trends to develop tools that transform how organizations approach marketing and program management. I am eager to contribute my unique blend of skills to roles that demand creativity, technical expertise, and strategic vision in artificial intelligence and marketing.</p>
+    </section>
+    </main>
+    </div>
+  </div>
+</body>
+</html>
+
+// === file: styles.css ===
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hero .pronouns {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.hero .role {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+#about {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#about h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#about p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
